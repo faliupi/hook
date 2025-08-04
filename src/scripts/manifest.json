@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Meet Focus Monitor",
+  "version": "1.2",
+  "description": "Memantau apakah pengguna keluar dari tab Google Meet dan memberikan pop-up peringatan.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "555.wav"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
